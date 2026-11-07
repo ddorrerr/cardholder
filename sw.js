@@ -1,8 +1,8 @@
 
 const BASE=new URL(self.registration.scope).pathname;
 const PREFIX='cardholder-shell-'+BASE+'-';
-const CACHE=PREFIX+'325f25d5b9d6';
-const FILES=["","index.html","manifest.webmanifest","icon.svg","icon-192.png","icon-512.png","apple-touch-icon.png","assets/index-B9S6DHzm.js","assets/index-BPDFr6MX.css","assets/src-xHNFWDYa.js"].map(path=>BASE+path);
+const CACHE=PREFIX+'89cd89c3d8f7';
+const FILES=["","index.html","manifest.webmanifest","icon.svg","icon-192.png","icon-512.png","apple-touch-icon.png","assets/index-D6Q8biaF.css","assets/index-DZHqJyLF.js","assets/src-CNdB-GG7.js"].map(path=>BASE+path);
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES))));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith(PREFIX)&&k!==CACHE).map(k=>caches.delete(k))))));
 self.addEventListener('fetch',e=>{
